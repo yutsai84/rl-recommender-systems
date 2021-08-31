@@ -1,6 +1,7 @@
 # Reinforcement Learning (RL) Recommender Systems Pipeline using MovieLens 100K dataset
 
 ## TF-Agents
+* (TODO): please breakdown how this is applied to MovieLens recommenders
 * A well written and detailed summary is [here](https://cloud.google.com/blog/topics/developers-practitioners/build-reinforcement-learning-recommendation-application-using-vertex-ai)
 * A flexible library enabling one to implement and test RL-based applications
 * Policy: Equivalent of a model in a supervised learning model, mapping from an observation to an action
