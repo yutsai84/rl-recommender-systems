@@ -1,9 +1,3 @@
-ROOT_DIR = "<local-root-path>"
-ROOT_DIR = f"{ROOT_DIR}/artifacts"  # @param {type:"string"} Root directory for writing logs/summaries/checkpoints.
-ARTIFACTS_DIR = f"{ROOT_DIR}/artifacts"  # @param {type:"string"} Where the trained model will be saved and restored.
-PROFILER_DIR = f"{ROOT_DIR}/profiler"  # @param {type:"string"} Directory for TensorBoard Profiler artifacts.
-DATA_PATH = f"{ROOT_DIR}/ml-100k/u.data" # @param {type:"string"}"gs://cloud-samples-data/vertex-ai/community-content/tf_agents_bandits_movie_recommendation_with_kfp_and_vertex_sdk/u.data"  # Location of the MovieLens 100K dataset's "u.data" file.
-
 # Set hyperparameters.
 BATCH_SIZE = 8  # @param {type:"integer"} Training and prediction batch size.
 TRAINING_LOOPS = 5  # @param {type:"integer"} Number of training iterations.

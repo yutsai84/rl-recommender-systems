@@ -1,0 +1,18 @@
+.dockerignore# docker
+docker-compose*.yml
+.dockerignore
+docker-common*.env
+
+tmp/
+
+# GIT
+.git/
+.github/
+
+# python
+.venv/
+.mypy_cache/
+__pycache__
+*.pyc
+*.pyo
+*.pyd

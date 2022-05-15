@@ -8,6 +8,7 @@ import numpy as np
 import os
 import time
 from typing import Callable, Dict, List, Any, Optional, TypeVar
+from pathlib import Path
 from plotting_utils import plot 
 
 import tensorflow as tf 
@@ -31,10 +32,15 @@ if tf.__version__[0] != "2":
 
 T = TypeVar("T")
 
+# ref for path setting:
+# https://stackoverflow.com/questions/40416072/reading-file-using-relative-path-in-python-project
+
+base_path = Path(__file__).parent
+DATA_PATH = (base_path / "../../ml-100k/u.data").resolve()
 
 def define_rl_envirioment() -> TFEnvironment:
     env = movielens_py_environment.MovieLensPyEnvironment(
-    const.DATA_PATH, const.RANK_K, const.BATCH_SIZE, num_movies=const.NUM_ACTIONS, csv_delimiter="\t")
+    DATA_PATH, const.RANK_K, const.BATCH_SIZE, num_movies=const.NUM_ACTIONS, csv_delimiter="\t")
     environment = tf_py_environment.TFPyEnvironment(env)
     return environment
 
