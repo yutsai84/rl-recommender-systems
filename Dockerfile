@@ -1,4 +1,4 @@
-FROM python:3.10.3-slim as package
+FROM python:3.8.3-slim as package
 
 ARG NB_USER=jovyan
 ARG NB_UID=1000
