@@ -1,5 +1,7 @@
 # Local Run of Reinforcement Learning (RL) Recommender Systems Pipeline using MovieLens 100K dataset
 
+To launch an interactive demo click here[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/yutsai84/rl-recommender-systems/HEAD)
+
 ## TF-Agents
 * A well written and detailed summary is [here](https://cloud.google.com/blog/topics/developers-practitioners/build-reinforcement-learning-recommendation-application-using-vertex-ai)
 * A flexible library enabling one to implement and test RL-based applications
@@ -23,10 +25,24 @@
 ## Code Structure
 * This code base leverages and follow closely with the step-by-step tutorials from a [google blog post](https://github.com/yutsai84/vertex-ai-samples/tree/master/community-content/tf_agents_bandits_movie_recommendation_with_kfp_and_vertex_sdk/step_by_step_sdk_tf_agents_bandits_movie_recommendation)
 * Model parameters and i/o are defined in constants module
-* Raw data of movie lens is expected to be downloaded from [kaggle](https://www.kaggle.com/prajitdatta/movielens-100k-dataset) and is saved to the path below defined in constants module
+* Raw data of movie lens was downloaded from [kaggle](https://www.kaggle.com/prajitdatta/movielens-100k-dataset) and was saved to `./ml-100k`
 
-```
-DATA_PATH = f"{ROOT_DIR}/ml-100k/u.data" 
-```
 * The source code is located at src folder, consisting of modeling, predicting, and plotting
 * Jupyter notebook is used as a runner code
+
+## Repo setup
+
+### Fully local
+
+1. install python, for example with pyenv: `pyenv install 3.8.3`
+2. install poetry: `pip install poetry`
+3. use poetry to install the dependencies: `poetry install`
+4. Fire up a jupyter server and go from there: `poetry run jupyter notebook tf-recommender-systems/step-by-step-reinforcement-learning.ipynb`
+
+### Via Docker
+
+In case it's easier to work with this data via docker, you can get a
+local image and access our interactive workbook via
+
+1. build their image `docker build -t tf-recommender-systems .`
+2. Run the image and access the lab! `docker run -it --rm -p 8888:8888 tf-recommender-systems jupyter lab --NotebookApp.default_url=/lab/ --ip=0.0.0.0 --port=8888`
