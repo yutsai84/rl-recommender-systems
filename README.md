@@ -45,4 +45,7 @@ In case it's easier to work with this data via docker, you can get a
 local image and access our interactive workbook via
 
 1. build their image `docker build -t tf-recommender-systems .`
-2. Run the image and access the lab! `docker run -it --rm -p 8888:8888 tf-recommender-systems jupyter lab --NotebookApp.default_url=/lab/ --ip=0.0.0.0 --port=8888`
+2. Run the image and access the lab! `docker run -it --rm -p 8888:8888 tf-recommender-systems jupyter lab --NotebookApp.default_url=/lab/ --ip=0.0.0.0 --port=8888`. However, this route needs you to set up jupyter notebook password.
+3. Another route is `docker run -it --rm tf-recommender-systems bash`. After you are in the docker shell, set a password. `jupyter notebook password`. 
+4. Launch jupyter notebook from the docker shell. 
+5. Copy the url from terminal to a browser.
