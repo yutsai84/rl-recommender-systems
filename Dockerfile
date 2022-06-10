@@ -18,7 +18,7 @@ USER ${NB_USER}
 
 WORKDIR ${HOME}
 ENV PATH=${PATH}:.local/bin
-RUN pip install --user poetry && \
+RUN pip install --user --no-cache-dir poetry && \
     poetry config virtualenvs.in-project true
 RUN poetry install
 ENV PYTHONPATH "${PYTHONPATH}:${HOME}"
