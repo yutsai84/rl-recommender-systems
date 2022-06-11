@@ -1,5 +1,5 @@
 # Local Run of Reinforcement Learning (RL) Recommender Systems Pipeline using MovieLens 100K dataset
-To launch an interactive demo click here[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/yutsai84/rl-recommender-systems/v0.1.0)
+To launch an interactive demo click here[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/yutsai84/rl-recommender-systems/v0.3.0)
 ## TF-Agents
 * A well written and detailed summary is [here](https://cloud.google.com/blog/topics/developers-practitioners/build-reinforcement-learning-recommendation-application-using-vertex-ai)
 * A flexible library enabling one to implement and test RL-based applications
