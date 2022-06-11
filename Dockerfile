@@ -7,7 +7,7 @@ ENV NB_UID ${NB_UID}
 ENV HOME /home/${NB_USER}
 
 RUN apt-get update && apt-get install -y \
-curl
+curl && apt-get install -y unzip
 
 RUN adduser --disabled-password \
     --gecos "Default user" \
